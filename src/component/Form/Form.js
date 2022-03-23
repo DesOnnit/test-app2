@@ -9,7 +9,7 @@ export default function Form(props) {
     const [message, setMessage] = useState('')
     const [email, setEmail] = useState(user.email);
     const [name, setName] = useState(user.name);
-    const [select, setSelect] = useState(user.select);
+    const [select, setSelect] = useState(user.select || '');
     const [emailError, setEmailError] = useState('');
     const [nameError, setNameError] = useState('');
     const history = useHistory()
@@ -70,7 +70,7 @@ export default function Form(props) {
                     error={isValidEmail ? '' : emailError}
                     success={successEmail} />
                 <select value={select} onChange={handleSelect} className="form__select" name="theme" required>
-                    <option value="" disabled hidden >Тема сообщения</option>
+                    <option value="" disabled hidden>Тема сообщения</option>
                     <option value="Тема 1">Тема 1</option>
                     <option value="Тема 2">Тема 2</option>
                     <option value="Тема 3">Тема 3</option>
