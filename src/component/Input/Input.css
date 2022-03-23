@@ -1,0 +1,40 @@
+.input {
+    border: 2px solid #EDE8F7;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: 'LetoSans';
+    font-size: 14px;
+    line-height: 16px;
+    color: #1D1539;
+    outline: none;
+    margin-bottom: 16px;
+    height: 56px;
+    padding: 22px 0 15px 16px;
+}
+
+.input::placeholder {
+    font-family: 'LetoSans';
+    font-size: 14px;
+    line-height: 16px;
+    color: #9B99AA;
+}
+
+.input__error{
+    border-color: #F8478D;
+    background: url(../../utils/Галочка.svg) no-repeat right;
+    background-position-x: calc(100% - 16px);
+}
+.input__error_text {
+    position: relative;
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'LetoSans';
+    color: red
+}
+.success{
+    border-color: #13C98A;
+    background: url(../../utils/Success.svg) no-repeat right;
+    background-position-x: calc(100% - 16px);
+}

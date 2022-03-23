@@ -1,0 +1,21 @@
+.user-data {
+    margin: 15px 0;
+}
+
+.user-data__title {
+    font-family: 'LetoSans';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 5px 0;
+}
+
+.user-data__subtitle {
+    font-family: 'LetoSans';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #000000;
+    margin-left: 5px;
+}
