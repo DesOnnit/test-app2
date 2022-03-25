@@ -1,8 +1,10 @@
 import { React, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import Input from '../Input/Input';
-import { UserContext } from '../context/UserContext'
+import { UserContext } from '../context/UserContext';
+import {options} from '../../utils/constants'
 import './Form.css';
+import Select from '../UI/Select/Select';
 
 export default function Form(props) {
     const user = useContext(UserContext);
@@ -49,6 +51,7 @@ export default function Form(props) {
     function handleSelect(e) {
         setSelect(e.target.value);
     }
+    
     return (
         <div className="form__page">
             <div className="form">
@@ -69,13 +72,11 @@ export default function Form(props) {
                     onChange={handleEmail}
                     error={isValidEmail ? '' : emailError}
                     success={successEmail} />
-                <select value={select} onChange={handleSelect} className="form__select" name="theme" required>
-                    <option value="" disabled hidden>Тема сообщения</option>
-                    <option value="Тема 1">Тема 1</option>
-                    <option value="Тема 2">Тема 2</option>
-                    <option value="Тема 3">Тема 3</option>
-                    <option value="Тема 4">Тема 4</option>
-                </select>
+                <Select
+                    options={options}
+                    defaultValue='Тема сообщения'
+                    select={select}
+                    handleSelect={handleSelect} />
                 <textarea
                     type="text"
                     name="message"

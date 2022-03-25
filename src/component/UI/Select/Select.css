@@ -1,0 +1,14 @@
+.form__select {
+    margin-bottom: 16px;
+    border: 2px solid #EDE8F7;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 56px;
+    padding: 22px 16px 15px;
+    font-family: 'LetoSans';
+    font-size: 14px;
+    line-height: 16px;
+    appearance: none;
+    background: url(../../../utils/Vector.svg) no-repeat right;
+    background-position-x: calc(100% - 16px);
+}
